@@ -10,7 +10,7 @@
 
 @implementation Analyser
 
-- (NSArray*)getFiveMostCommomWords:(NSString *)text
+- (NSDictionary*)getFiveMostCommomWords:(NSString *)text
 {
     NSArray *words = [text componentsSeparatedByString:@" "];
     NSMutableDictionary* statistics = [NSMutableDictionary dictionary];
@@ -39,9 +39,15 @@
         
         return (NSComparisonResult)NSOrderedSame;
     }];
-    NSInteger position = [sortedWords count]>5?5:[sortedWords count];
-    NSMutableArray* mutableSortedWords = [NSMutableArray arrayWithArray:sortedWords];
-    [mutableSortedWords removeObjectsInRange:NSMakeRange(position, [sortedWords count]-position)];
+    
+    NSMutableDictionary* mutableSortedWords = [NSMutableDictionary dictionary];
+    [sortedWords enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL*stop)
+     {
+         NSLog(@"%@", obj);
+         [mutableSortedWords setObject: [statistics valueForKey: obj] forKey: obj];
+         if(idx==4)
+             *stop = TRUE;
+     }];
     return mutableSortedWords;
   
 }

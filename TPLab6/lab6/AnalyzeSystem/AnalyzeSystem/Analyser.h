@@ -10,6 +10,6 @@
 
 @interface Analyser : NSObject
 
-- (NSArray*)getFiveMostCommomWords:(NSString *)text;
+- (NSDictionary*)getFiveMostCommomWords:(NSString *)text;
 
 @end

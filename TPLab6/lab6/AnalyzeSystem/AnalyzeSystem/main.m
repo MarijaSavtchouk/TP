@@ -18,11 +18,12 @@ int main(int argc, const char * argv[]) {
         NSString *inputString = [[NSString alloc] initWithData:inputData encoding:NSUTF8StringEncoding];
         inputString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         Analyser *analyser = [[Analyser alloc] init];
-        NSArray* fiveWords = [analyser getFiveMostCommomWords:inputString];
-        for(NSString* word in fiveWords)
+        NSDictionary* fiveWords = [analyser getFiveMostCommomWords:inputString];
+        [fiveWords enumerateKeysAndObjectsUsingBlock:^(id key, id  obj, BOOL *stop)
         {
-            NSLog(@"%@",word);
-        }
+            NSLog(@"%@ %@", key, obj);
+        }];
+        
     }
     return 0;
 }
