@@ -10,7 +10,9 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *temperatureValue;
 @property (weak, nonatomic) IBOutlet UILabel *indicator;
+
 @end
 
 @implementation ViewController
