@@ -42,12 +42,20 @@
         if(temperature<=0)
         {
             blue = 1.0f;
-            red = green = (255+6*temperature)/255.0f;
+            red = green = (245+6*temperature)/255.0f;
+            if(red<0)
+            {
+                red = green = 0;
+            }
         }
         else
         {
             red = 1.0f;
-            blue = green = (255-6*temperature)/255.0f;
+            blue = green = (245-6*temperature)/255.0f;
+            if(blue<0)
+            {
+                blue = green = 0;
+            }
         }
         
         [[self temperature] setTextColor:[UIColor colorWithRed:red
@@ -58,7 +66,7 @@
     else
     {
         [_temperature setText:@""];
-         }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
