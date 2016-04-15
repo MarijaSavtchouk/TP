@@ -43,7 +43,7 @@
     NSMutableDictionary* mutableSortedWords = [NSMutableDictionary dictionary];
     [sortedWords enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL*stop)
      {
-         NSLog(@"%@", obj);
+         //NSLog(@"%@", obj);
          [mutableSortedWords setObject: [statistics valueForKey: obj] forKey: obj];
          if(idx==4)
              *stop = TRUE;

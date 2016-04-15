@@ -19,10 +19,28 @@ int main(int argc, const char * argv[]) {
         inputString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         Analyser *analyser = [[Analyser alloc] init];
         NSDictionary* fiveWords = [analyser getFiveMostCommomWords:inputString];
-        [fiveWords enumerateKeysAndObjectsUsingBlock:^(id key, id  obj, BOOL *stop)
-        {
-            NSLog(@"%@ %@", key, obj);
+        
+        NSArray *sortedWords;
+        
+        sortedWords = [fiveWords keysSortedByValueUsingComparator: ^(id obj1, id obj2) {
+            
+            if ([obj1 integerValue] > [obj2 integerValue]) {
+                
+                return (NSComparisonResult)NSOrderedAscending;
+            }
+            if ([obj1 integerValue] < [obj2 integerValue]) {
+                
+                return (NSComparisonResult)NSOrderedDescending;
+            }
+            
+            return (NSComparisonResult)NSOrderedSame;
         }];
+
+        [sortedWords enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL*stop)
+         {
+             NSLog(@"%@ %@", obj, fiveWords[obj]);
+
+         }];
         
     }
     return 0;
