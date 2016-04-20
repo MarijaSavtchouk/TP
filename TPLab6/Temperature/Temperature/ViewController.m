@@ -7,67 +7,101 @@
 //
 
 #import "ViewController.h"
-
+#import "QueryProvider.h"
+@import CoreLocation;
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *cityField;
 @property (weak, nonatomic) IBOutlet UILabel *temperature;
-
+@property (weak, nonatomic) IBOutlet UISwitch *isGPS;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) CLGeocoder *geocoder;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    // ** Don't forget to add NSLocationWhenInUseUsageDescription in MyApp-Info.plist and give it a string
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    self.geocoder = [[CLGeocoder alloc] init];
+    //[self.locationManager startUpdatingLocation];
 }
-- (IBAction)update:(id)sender
+double temperature = 0 ;
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    NSMutableString *url_buf = [[NSMutableString alloc] initWithString:@"https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22"];
-
-    [url_buf appendString: [_cityField text]];
-    [url_buf appendString:@"%2C%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys"];
-    NSURL *url = [[NSURL alloc] initWithString:url_buf];
-    NSData *contents = [[NSData alloc] initWithContentsOfURL:url];
+    CLLocation *location = locations[[locations count] - 1];
     
-    NSDictionary *forecast = [NSJSONSerialization JSONObjectWithData:contents options:NSJSONReadingMutableContainers error:nil];
-    if([[NSString stringWithFormat:@"%@", forecast[@"query"][@"count"]] isEqualToString:@"1"])
+    if (location != nil)
     {
-        double temperature = [[NSString stringWithFormat:@"%@ F", forecast[@"query"][@"results"][@"channel"][@"item"][@"condition"][@"temp"]] doubleValue];
-        temperature = (temperature - 32) * 5/ 9.0;
-    
-        [_temperature setText:[NSString stringWithFormat:@"%.1fC", temperature]];
-        float green = 0;
-        float blue = 0;
-        float red = 0;
-        if(temperature<=0)
+        NSString* url_buf = [QueryProvider queryByLatitude:location.coordinate.latitude andLongitude:location.coordinate.longitude];
+        
+        NSURL *url = [[NSURL alloc] initWithString:url_buf];
+        NSData *contents = [[NSData alloc] initWithContentsOfURL:url];
+        NSDictionary *forecast = [NSJSONSerialization JSONObjectWithData:contents options:NSJSONReadingMutableContainers error:nil];
+        if([[NSString stringWithFormat:@"%@", forecast[@"query"][@"count"]] isEqualToString:@"1"])
         {
-            blue = 1.0f;
-            red = green = (245+6*temperature)/255.0f;
-            if(red<0)
-            {
-                red = green = 0;
-            }
+            temperature = [[NSString stringWithFormat:@"%@ F", forecast[@"query"][@"results"][@"channel"][@"item"][@"condition"][@"temp"]] doubleValue];
+            temperature = (temperature - 32) * 5/ 9.0;
+            
+            [_temperature setText:[NSString stringWithFormat:@"%.1fC", temperature]];
+            [self.geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
+                if (error == nil && [placemarks count] > 0) {
+
+                    CLPlacemark *placemark = [placemarks lastObject];
+                    [_cityField setText: [NSString stringWithFormat:@"%@", placemark.locality]];
+                } else {
+                    NSLog(@"%@", error.debugDescription);
+                }
+            } ];
+        
         }
         else
         {
-            red = 1.0f;
-            blue = green = (245-6*temperature)/255.0f;
-            if(blue<0)
-            {
-                blue = green = 0;
-            }
+            [_temperature setText:@"Unknown"];
         }
-        
-        [[self temperature] setTextColor:[UIColor colorWithRed:red
-                    green:green
-                     blue:blue
-                    alpha:1.0f]];
+    }
+    else {
+        [_temperature setText:@"Unknown"];
+    }
+    
+    [[self temperature] setTextColor:[QueryProvider colorByTemperature: temperature]];
+    [self.locationManager stopUpdatingLocation];
+}
+- (IBAction)update:(id)sender
+{
+    if([_isGPS isOn])
+    {
+        [self.locationManager startUpdatingLocation];
     }
     else
     {
-        [_temperature setText:@""];
+        
+        NSString* url_buf = [QueryProvider queryByCity:[_cityField text]];
+        NSURL *url = [[NSURL alloc] initWithString:url_buf];
+        NSData *contents = [[NSData alloc] initWithContentsOfURL:url];
+        NSDictionary *forecast = [NSJSONSerialization JSONObjectWithData:contents options:NSJSONReadingMutableContainers error:nil];
+        if([[NSString stringWithFormat:@"%@", forecast[@"query"][@"count"]] isEqualToString:@"1"])
+        {
+            temperature = [[NSString stringWithFormat:@"%@ F", forecast[@"query"][@"results"][@"channel"][@"item"][@"condition"][@"temp"]] doubleValue];
+            temperature = (temperature - 32) * 5/ 9.0;
+            
+            [_temperature setText:[NSString stringWithFormat:@"%.1fC", temperature]];
+        }
+        else
+        {
+            [_temperature setText:@"Unknown"];
+        }
     }
+        
+    [[self temperature] setTextColor:[QueryProvider colorByTemperature: temperature]];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

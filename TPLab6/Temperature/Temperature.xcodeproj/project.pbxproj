@@ -15,6 +15,7 @@
 		D071ADBB1CBFC14A00DEE236 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D071ADBA1CBFC14A00DEE236 /* Images.xcassets */; };
 		D071ADBE1CBFC14A00DEE236 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D071ADBC1CBFC14A00DEE236 /* LaunchScreen.xib */; };
 		D071ADCA1CBFC14A00DEE236 /* TemperatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D071ADC91CBFC14A00DEE236 /* TemperatureTests.m */; };
+		D0CF68011CC6210400D263C1 /* QueryProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CF68001CC6210400D263C1 /* QueryProvider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		D071ADC31CBFC14A00DEE236 /* TemperatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemperatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D071ADC81CBFC14A00DEE236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D071ADC91CBFC14A00DEE236 /* TemperatureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TemperatureTests.m; sourceTree = "<group>"; };
+		D0CF67FF1CC6210400D263C1 /* QueryProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryProvider.h; sourceTree = "<group>"; };
+		D0CF68001CC6210400D263C1 /* QueryProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryProvider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				D071ADBC1CBFC14A00DEE236 /* LaunchScreen.xib */,
 				D071ADB11CBFC14A00DEE236 /* Temperature.xcdatamodeld */,
 				D071ADAA1CBFC14900DEE236 /* Supporting Files */,
+				D0CF67FF1CC6210400D263C1 /* QueryProvider.h */,
+				D0CF68001CC6210400D263C1 /* QueryProvider.m */,
 			);
 			path = Temperature;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 				D071ADB31CBFC14A00DEE236 /* Temperature.xcdatamodeld in Sources */,
 				D071ADB61CBFC14A00DEE236 /* ViewController.m in Sources */,
 				D071ADAD1CBFC14900DEE236 /* main.m in Sources */,
+				D0CF68011CC6210400D263C1 /* QueryProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +422,7 @@
 				D071ADCF1CBFC14A00DEE236 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D071ADD01CBFC14A00DEE236 /* Build configuration list for PBXNativeTarget "TemperatureTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +431,7 @@
 				D071ADD21CBFC14A00DEE236 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
