@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0722DBD1CCF6AF40066356A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0722DBC1CCF6AF40066356A /* main.m */; };
+		D0722DC01CCF6AF40066356A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0722DBF1CCF6AF40066356A /* AppDelegate.m */; };
+		D0722DC21CCF6AF40066356A /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = D0722DC11CCF6AF40066356A /* Shader.fsh */; };
+		D0722DC41CCF6AF40066356A /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = D0722DC31CCF6AF40066356A /* Shader.vsh */; };
+		D0722DC71CCF6AF40066356A /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0722DC61CCF6AF40066356A /* GameViewController.m */; };
+		D0722DCA1CCF6AF40066356A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0722DC81CCF6AF40066356A /* Main.storyboard */; };
+		D0722DCC1CCF6AF40066356A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0722DCB1CCF6AF40066356A /* Images.xcassets */; };
+		D0722DCF1CCF6AF40066356A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0722DCD1CCF6AF40066356A /* LaunchScreen.xib */; };
+		D0722DDB1CCF6AF40066356A /* TeapotGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0722DDA1CCF6AF40066356A /* TeapotGameTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0722DD51CCF6AF40066356A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0722DAF1CCF6AF40066356A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0722DB61CCF6AF40066356A;
+			remoteInfo = TeapotGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D0722DB71CCF6AF40066356A /* TeapotGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeapotGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0722DBB1CCF6AF40066356A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0722DBC1CCF6AF40066356A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0722DBE1CCF6AF40066356A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D0722DBF1CCF6AF40066356A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D0722DC11CCF6AF40066356A /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
+		D0722DC31CCF6AF40066356A /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
+		D0722DC51CCF6AF40066356A /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		D0722DC61CCF6AF40066356A /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		D0722DC91CCF6AF40066356A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0722DCB1CCF6AF40066356A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D0722DCE1CCF6AF40066356A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D0722DD41CCF6AF40066356A /* TeapotGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeapotGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0722DD91CCF6AF40066356A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0722DDA1CCF6AF40066356A /* TeapotGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeapotGameTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0722DB41CCF6AF40066356A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0722DD11CCF6AF40066356A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0722DAE1CCF6AF40066356A = {
+			isa = PBXGroup;
+			children = (
+				D0722DB91CCF6AF40066356A /* TeapotGame */,
+				D0722DD71CCF6AF40066356A /* TeapotGameTests */,
+				D0722DB81CCF6AF40066356A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0722DB81CCF6AF40066356A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0722DB71CCF6AF40066356A /* TeapotGame.app */,
+				D0722DD41CCF6AF40066356A /* TeapotGameTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0722DB91CCF6AF40066356A /* TeapotGame */ = {
+			isa = PBXGroup;
+			children = (
+				D0722DBE1CCF6AF40066356A /* AppDelegate.h */,
+				D0722DBF1CCF6AF40066356A /* AppDelegate.m */,
+				D0722DC11CCF6AF40066356A /* Shader.fsh */,
+				D0722DC31CCF6AF40066356A /* Shader.vsh */,
+				D0722DC51CCF6AF40066356A /* GameViewController.h */,
+				D0722DC61CCF6AF40066356A /* GameViewController.m */,
+				D0722DC81CCF6AF40066356A /* Main.storyboard */,
+				D0722DCB1CCF6AF40066356A /* Images.xcassets */,
+				D0722DCD1CCF6AF40066356A /* LaunchScreen.xib */,
+				D0722DBA1CCF6AF40066356A /* Supporting Files */,
+			);
+			path = TeapotGame;
+			sourceTree = "<group>";
+		};
+		D0722DBA1CCF6AF40066356A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0722DBB1CCF6AF40066356A /* Info.plist */,
+				D0722DBC1CCF6AF40066356A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0722DD71CCF6AF40066356A /* TeapotGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0722DDA1CCF6AF40066356A /* TeapotGameTests.m */,
+				D0722DD81CCF6AF40066356A /* Supporting Files */,
+			);
+			path = TeapotGameTests;
+			sourceTree = "<group>";
+		};
+		D0722DD81CCF6AF40066356A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0722DD91CCF6AF40066356A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0722DB61CCF6AF40066356A /* TeapotGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0722DDE1CCF6AF40066356A /* Build configuration list for PBXNativeTarget "TeapotGame" */;
+			buildPhases = (
+				D0722DB31CCF6AF40066356A /* Sources */,
+				D0722DB41CCF6AF40066356A /* Frameworks */,
+				D0722DB51CCF6AF40066356A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TeapotGame;
+			productName = TeapotGame;
+			productReference = D0722DB71CCF6AF40066356A /* TeapotGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0722DD31CCF6AF40066356A /* TeapotGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0722DE11CCF6AF40066356A /* Build configuration list for PBXNativeTarget "TeapotGameTests" */;
+			buildPhases = (
+				D0722DD01CCF6AF40066356A /* Sources */,
+				D0722DD11CCF6AF40066356A /* Frameworks */,
+				D0722DD21CCF6AF40066356A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0722DD61CCF6AF40066356A /* PBXTargetDependency */,
+			);
+			name = TeapotGameTests;
+			productName = TeapotGameTests;
+			productReference = D0722DD41CCF6AF40066356A /* TeapotGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0722DAF1CCF6AF40066356A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = fpmi;
+				TargetAttributes = {
+					D0722DB61CCF6AF40066356A = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					D0722DD31CCF6AF40066356A = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = D0722DB61CCF6AF40066356A;
+					};
+				};
+			};
+			buildConfigurationList = D0722DB21CCF6AF40066356A /* Build configuration list for PBXProject "TeapotGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0722DAE1CCF6AF40066356A;
+			productRefGroup = D0722DB81CCF6AF40066356A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0722DB61CCF6AF40066356A /* TeapotGame */,
+				D0722DD31CCF6AF40066356A /* TeapotGameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0722DB51CCF6AF40066356A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0722DCF1CCF6AF40066356A /* LaunchScreen.xib in Resources */,
+				D0722DCA1CCF6AF40066356A /* Main.storyboard in Resources */,
+				D0722DCC1CCF6AF40066356A /* Images.xcassets in Resources */,
+				D0722DC41CCF6AF40066356A /* Shader.vsh in Resources */,
+				D0722DC21CCF6AF40066356A /* Shader.fsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0722DD21CCF6AF40066356A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0722DB31CCF6AF40066356A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0722DC01CCF6AF40066356A /* AppDelegate.m in Sources */,
+				D0722DC71CCF6AF40066356A /* GameViewController.m in Sources */,
+				D0722DBD1CCF6AF40066356A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0722DD01CCF6AF40066356A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0722DDB1CCF6AF40066356A /* TeapotGameTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0722DD61CCF6AF40066356A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0722DB61CCF6AF40066356A /* TeapotGame */;
+			targetProxy = D0722DD51CCF6AF40066356A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0722DC81CCF6AF40066356A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0722DC91CCF6AF40066356A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D0722DCD1CCF6AF40066356A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0722DCE1CCF6AF40066356A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0722DDC1CCF6AF40066356A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0722DDD1CCF6AF40066356A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0722DDF1CCF6AF40066356A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TeapotGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D0722DE01CCF6AF40066356A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TeapotGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D0722DE21CCF6AF40066356A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TeapotGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeapotGame.app/TeapotGame";
+			};
+			name = Debug;
+		};
+		D0722DE31CCF6AF40066356A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TeapotGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeapotGame.app/TeapotGame";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0722DB21CCF6AF40066356A /* Build configuration list for PBXProject "TeapotGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0722DDC1CCF6AF40066356A /* Debug */,
+				D0722DDD1CCF6AF40066356A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0722DDE1CCF6AF40066356A /* Build configuration list for PBXNativeTarget "TeapotGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0722DDF1CCF6AF40066356A /* Debug */,
+				D0722DE01CCF6AF40066356A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D0722DE11CCF6AF40066356A /* Build configuration list for PBXNativeTarget "TeapotGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0722DE21CCF6AF40066356A /* Debug */,
+				D0722DE31CCF6AF40066356A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0722DAF1CCF6AF40066356A /* Project object */;
+}

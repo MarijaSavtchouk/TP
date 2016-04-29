@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LVB-YS-i5n">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="CtS-rA-C9T">
+            <objects>
+                <viewController id="LVB-YS-i5n" customClass="GameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HDc-Oi-m1f"/>
+                        <viewControllerLayoutGuide type="bottom" id="BUi-cd-6YH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bdc-N1-crn" customClass="GLKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Kpn-J2-NxB" appends="YES" id="R8V-DA-fYz"/>
+                            <outletCollection property="gestureRecognizers" destination="QJg-7c-7CV" appends="YES" id="Ibt-iZ-hVH"/>
+                            <outletCollection property="gestureRecognizers" destination="bYZ-7y-aRo" appends="YES" id="t3T-xK-tPx"/>
+                            <outletCollection property="gestureRecognizers" destination="qOI-au-Cjo" appends="YES" id="hBg-Sf-0ih"/>
+                            <outletCollection property="gestureRecognizers" destination="4ei-nx-rNK" appends="YES" id="fp3-z1-1Qk"/>
+                            <outletCollection property="gestureRecognizers" destination="eem-FC-RRK" appends="YES" id="abo-aD-w1i"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="doubleTapRecognizer" destination="Kpn-J2-NxB" id="sVt-9I-pqH"/>
+                        <outlet property="downSwipeRecognizer" destination="4ei-nx-rNK" id="tiU-RE-rks"/>
+                        <outlet property="leftSwipeRecognizer" destination="qOI-au-Cjo" id="9L1-Eg-cpY"/>
+                        <outlet property="rightSwipeRecognizer" destination="QJg-7c-7CV" id="Oub-hU-aVd"/>
+                        <outlet property="upSwipeRecognizer" destination="bYZ-7y-aRo" id="8Ru-G3-sRN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Kpn-J2-NxB">
+                    <connections>
+                        <action selector="doubleTapDone:" destination="LVB-YS-i5n" id="pSx-bp-Jok"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="eem-FC-RRK">
+                    <connections>
+                        <action selector="tapDone:" destination="LVB-YS-i5n" id="ZRY-uS-Omz"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="QJg-7c-7CV">
+                    <connections>
+                        <action selector="rightSwipe:" destination="LVB-YS-i5n" id="MOW-UK-NJn"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="bYZ-7y-aRo">
+                    <connections>
+                        <action selector="upSwipe:" destination="LVB-YS-i5n" id="PI0-5l-oKe"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="qOI-au-Cjo">
+                    <connections>
+                        <action selector="leftSwipe:" destination="LVB-YS-i5n" id="XxN-gE-H1e"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="4ei-nx-rNK">
+                    <connections>
+                        <action selector="downSwipe:" destination="LVB-YS-i5n" id="stg-EJ-wkH"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
